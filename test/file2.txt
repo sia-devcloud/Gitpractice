@@ -1,0 +1,5 @@
+This program defines a function simple_interest that takes three parameters: principal, rate, and time. It calculates the simple interest using the formula Simple Interest = (Principal * Rate * Time) / 100.
+
+In the example usage, it prompts the user to input the principal amount, annual interest rate, and time period, and then calculates and prints the simple interest.
+
+You can run this program and input the required values when prompted to calculate the simple interest.
