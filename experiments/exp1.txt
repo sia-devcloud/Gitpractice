@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+// Function to find the greatest common divisor (GCD) of two numbers
+int gcd(int a, int b) {
+    if (b == 0)
+        return a;
+    return gcd(b, a % b);
+}
+
+// Function to find the LCM of two numbers
+int lcm(int a, int b) {
+    return (a * b) / gcd(a, b);
+}
+
+// Function to find the LCM of three numbers
+int lcm_of_three(int a, int b, int c) {
+    // LCM(a, b, c) = LCM(LCM(a, b), c)
+    return lcm(lcm(a, b), c);
+}
+

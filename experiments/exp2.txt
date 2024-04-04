@@ -1,0 +1,16 @@
+
+int main() {
+    int num1, num2, num3;
+
+    // Input three numbers from user
+    printf("Enter three numbers: ");
+    scanf("%d %d %d", &num1, &num2, &num3);
+
+    // Calculate the LCM of the three numbers
+    int result = lcm_of_three(num1, num2, num3);
+
+    // Print the result
+    printf("LCM of %d, %d and %d is %d\n", num1, num2, num3, result);
+
+    return 0;
+}
