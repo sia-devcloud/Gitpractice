@@ -1,0 +1,39 @@
+import unittest
+from simple_interest import simple_interest
+
+class TestSimpleInterest(unittest.TestCase):
+    def test_simple_interest_calculation(self):
+        # Test with principal = 1000, rate = 5%, time = 2 years
+        principal = 1000
+        rate = 5
+        time = 2
+        expected_interest = (principal * rate * time) / 100
+        self.assertEqual(simple_interest(principal, rate, time), expected_interest)
+
+    def test_simple_interest_zero_principal(self):
+        # Test with principal = 0, rate = 5%, time = 2 years
+        principal = 0
+        rate = 5
+        time = 2
+        expected_interest = 0
+        self.assertEqual(simple_interest(principal, rate, time), expected_interest)
+
+    def test_simple_interest_negative_principal(self):
+        # Test with principal = -1000, rate = 5%, time = 2 years
+        principal = -1000
+        rate = 5
+        time = 2
+        # Expect an error since principal should be a positive value
+        with self.assertRaises(ValueError):
+            simple_interest(principal, rate, time)
+
+    def test_simple_interest_zero_time(self):
+        # Test with principal = 1000, rate = 5%, time = 0 years
+        principal = 1000
+        rate = 5
+        time = 0
+        expected_interest = 0
+        self.assertEqual(simple_interest(principal, rate, time), expected_interest)
+
+if __name__ == '__main__':
+    unittest.main()
