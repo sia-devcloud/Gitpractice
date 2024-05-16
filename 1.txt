@@ -1,1 +1,2 @@
-hi, can you tell when the minister will come,helldddo
+hi, can you tell when the minister will come
+This is the check 2 for pull request
